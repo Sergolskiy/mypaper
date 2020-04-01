@@ -1,0 +1,214 @@
+extends _layout
+
+block vars
+	- var pageTitle = "Home page";
+	- var pageClass = "homepage";
+
+block content
+	//.webp-img(data-webp="./img/Rectangle5.webp" data-img="./img/Rectangle5.jpg")
+
+		<picture>
+			<source srcset="./img/awesomeWebPImage.webp" type="image/webp">
+			<source srcset="./img/creakyOldJPEG.jpg" type="image/jpeg">
+			<img src="./img/creakyOldJPEG.jpg" alt="Alt Text!">
+		</picture>
+
+	div.main-wrap
+		.home-scroll
+			.home-scroll__item
+				.home-screen
+					.home-screen__left
+						.home-screen__inscription Hello!
+						.home-screen__title How to succeed in school without straining
+						.home-screen__caption Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+						.home-screen__btns
+							a.site-btn.btn-violet Order now
+							a.site-btn.btn-white Start the story
+					.home-screen__right
+						img(src="" alt="img")
+
+			.home-scroll__item
+				.home-screen
+					.home-screen__left
+						.home-screen__inscription 1 Step
+						.home-screen__title Choose the type of paper you need
+						.home-screen__caption  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+						.home-screen__showing
+							.home-screen__showing-i
+								.home-screen__showing-top
+									.home-screen__showing-icon
+									.home-screen__showing-title Paper
+								.home-screen__showing-txt Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+								.home-screen__showing-btns
+									a.site-small-btn(href="#") Order Now
+									a.site-show-btn(href="#") Sample
+							.home-screen__showing-i
+								.home-screen__showing-top
+									.home-screen__showing-icon
+									.home-screen__showing-title Presentation
+								.home-screen__showing-txt Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+								.home-screen__showing-btns
+									a.site-small-btn(href="#") Order Now
+									a.site-show-btn(href="#") Sample
+							.home-screen__showing-i
+								.home-screen__showing-top
+									.home-screen__showing-icon
+									.home-screen__showing-title Something else
+								.home-screen__showing-txt Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+								.home-screen__showing-btns
+									a.site-small-btn(href="#") Order Now
+									a.site-show-btn(href="#") Sample
+					.home-screen__right
+						img(src="" alt="img")
+
+			.home-scroll__item
+				.home-screen
+					.home-screen__left
+						.home-screen__inscription 2 Step
+						.home-screen__title From the top 2%, we bring you the best.
+						.home-screen__caption From a team comprising the top 2% of the academic talent out there, you get the expert that best fits your project.
+						.home-screen__tabs
+							.home-screen__tabs-items
+								.home-screen__tabs-i
+									span 1
+									span 100%
+								.home-screen__tabs-i
+									span 2
+									span 60%
+								.home-screen__tabs-i
+									span 3
+									span 20%
+								.home-screen__tabs-i
+									span 4
+									span TOP 2%
+								.home-screen__tabs-i
+									span 5
+									span.star
+							.home-screen__tabs-content
+								.home-screen__tabs-c-i
+									.home-screen__tabs-title Start of selection
+									.home-screen__tabs-txt  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+
+								.home-screen__tabs-c-i
+									.home-screen__tabs-title Start of selection
+									.home-screen__tabs-txt  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+
+								.home-screen__tabs-c-i
+									.home-screen__tabs-title Start of selection
+									.home-screen__tabs-txt  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+
+								.home-screen__tabs-c-i
+									.home-screen__tabs-title Start of selection
+									.home-screen__tabs-txt  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+
+								.home-screen__tabs-c-i
+									.home-screen__tabs-title Start of selection
+									.home-screen__tabs-txt  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+					.home-screen__right
+						img(src="" alt="img")
+
+			.home-scroll__item
+				.home-screen
+					.home-screen__left
+						.home-screen__inscription 3 Step
+						.home-screen__title We select the right writer for you
+						.home-screen__list
+							.home-screen__list-i
+								.home-screen__list-icon
+								.home-screen__list-title
+									| Dedline min 3 hrs
+									br
+									| Dedline min 3 hrs
+								.home-screen__list-txt Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+							.home-screen__list-i
+								.home-screen__list-icon
+								.home-screen__list-title
+									| Your wishes
+									br
+									| Dedline min 3 hrs
+								.home-screen__list-txt Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+							.home-screen__list-i
+								.home-screen__list-icon
+								.home-screen__list-title
+									| Back’n forth
+									br
+									| Dedline min 3 hrs
+								.home-screen__list-txt Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+					.home-screen__right
+						img(src="" alt="img")
+
+			.home-scroll__item
+				.home-screen
+					.home-screen__left
+						.home-screen__inscription 4 Step
+						.home-screen__title We select the right writer for you
+						.home-screen__caption  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+						.home-screen__showing
+							.home-screen__showing-i
+								.home-screen__showing-top
+									.home-screen__showing-icon
+									.home-screen__showing-title 2x Plagiarism Protection
+								.home-screen__showing-txt Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+							.home-screen__showing-i
+								.home-screen__showing-top
+									.home-screen__showing-icon
+									.home-screen__showing-title Free unlimited revisions
+								.home-screen__showing-txt Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+							.home-screen__showing-i
+								.home-screen__showing-top
+									.home-screen__showing-icon
+									.home-screen__showing-title Review by trained editor
+								.home-screen__showing-txt Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+					.home-screen__right
+						img(src="" alt="img")
+
+
+			.home-scroll__item
+				.home-screen
+					.home-screen__left
+						.home-screen__inscription 5 Step
+						.home-screen__title Delivery
+						.home-screen__caption Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+						.home-screen__slider
+								.home-screen__slide
+									.home-screen__slide-top
+										.home-screen__slide-left
+											.home-screen__slide-name
+											.home-screen__slide-town
+										.home-screen__slide-stars
+											img(src="" alt="img")
+									.home-screen__slide-txt Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+					.home-screen__right
+						img(src="" alt="img")
+
+
+			.home-scroll__item
+				.home-screen
+					.home-screen__left
+						.home-screen__title Hire the best writer
+						.home-screen__caption Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+						.home-screen__btns
+							a.site-btn.btn-violet Order now
+					.home-screen__right
+						img(src="" alt="img")
+
+		.seo-txt.has-form
+			.subscribe-form
+				.subscribe-form__feft
+					.subscribe-form__title Subscribe to our newsletter
+				.subscribe-form__right
+					form
+						.subscribe-form__input Your Email
+						a(href="#").subscribe-form__btn subscribe
+
+			.seo-txt__inner
+				.seo-txt__title Lorem ipsum dolor sit amet,
+				.seo-txt__txt
+					| Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore etliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+					| Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+					| Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+
+
+
+
+

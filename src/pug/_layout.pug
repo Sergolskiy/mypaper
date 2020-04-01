@@ -1,0 +1,28 @@
+include _mixins
+
+block vars
+
+doctype html
+html(lang="en")
+	head
+		meta(charset="utf-8")
+		meta(http-equiv='X-UA-Compatible', content='IE=edge')
+		meta(name="viewport" content="initial-scale=1.0, width=device-width")
+		title Boost Your Sales With Powerful Marketing Materials For Small Business
+		link(rel="icon" href="img/favicon.ico" type="image/x-icon")
+		meta(name="description", content='Boost Your Sales With Powerful Marketing Materials For Small Business')
+
+		link(rel='stylesheet', href='css/libs.min.css')
+		link(rel='stylesheet', href='css/style.min.css')
+
+	body.page
+		.page__wrapper
+			include modules/_header
+
+			main.page__content
+				block content
+
+			include modules/_footer
+		block scripts
+			script(src='js/libs.min.js')
+			script(src='js/main.min.js')
