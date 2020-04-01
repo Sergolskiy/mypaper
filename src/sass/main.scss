@@ -9,7 +9,56 @@ $blacklight: #656073;
 
 body {
   font-size: 18px;
-  font-family: 'Poppins';
+  font-family: 'Lato-Regular';
   line-height: 28px;
   color: #656073;
 }
+
+.header{
+
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1470px;
+    margin: 0 auto;
+    padding: 20px 0;
+  }
+
+  &__logo{
+    display: flex;
+    align-items: center;
+  }
+
+  &__menu{
+    display: flex;
+  }
+
+  &__list{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+
+  }
+
+  &__item{
+
+  }
+
+  &__link{
+
+  }
+
+  &__login-btn{
+
+  }
+
+  &__btn{
+
+  }
+
+
+}
+

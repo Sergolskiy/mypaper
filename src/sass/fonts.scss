@@ -1,19 +1,45 @@
+/* Font */
+
+
+
 @font-face {
-  font-family: 'Montserrat-Bold';
-  src: url('../fonts/Montserrat-Bold.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/Montserrat-Bold.woff') format('woff'),
-  url('../fonts/Montserrat-Bold.ttf')  format('truetype'),
-  url('../fonts/Montserrat-Bold.svg#Montserrat-Bold') format('svg');
+  font-family: 'FiraSans-Medium';
+  src: url('../fonts/FiraSans-Medium/FiraSans-Medium.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/FiraSans-Medium/FiraSans-Medium.woff') format('woff'), url('../fonts/FiraSans-Medium/FiraSans-Medium.ttf')  format('truetype'), url('../fonts/FiraSans-Medium/FiraSans-Medium.svg#FiraSans-Medium') format('svg');
   font-weight: normal;
   font-style: normal;
+  //font-display: swap;
 }
 
 @font-face {
-  font-family: 'Poppins';
-  src: url('../fonts/Poppins-Regular.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/Poppins-Regular.woff') format('woff'),
-  url('../fonts/Poppins-Regular.ttf')  format('truetype'),
-  url('../fonts/Poppins-Regular.svg#Poppins-Regular') format('svg');
+  font-family: 'Lato-Regular';
+  src: url('../fonts/Lato-Regular/Lato-Regular.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Lato-Regular/Lato-Regular.woff') format('woff'), url('../fonts/Lato-Regular/Lato-Regular.ttf')  format('truetype'), url('../fonts/Lato-Regular/Lato-Regular.svg#Lato-Regular') format('svg');
   font-weight: normal;
   font-style: normal;
+  //font-display: swap;
 }
+
+@font-face {
+  font-family: 'Roboto-Medium';
+  src: url('../fonts/Roboto-Medium/Roboto-Medium.eot?#iefix') format('embedded-opentype'),  url('../fonts/Roboto-Medium/Roboto-Medium.woff') format('woff'), url('../fonts/Roboto-Medium/Roboto-Medium.ttf')  format('truetype'), url('../fonts/Roboto-Medium/Roboto-Medium.svg#Roboto-Medium') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  //font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'Roboto-Regular';
+  src: url('../fonts/Roboto-Regular/Roboto-Regular.eot?#iefix') format('embedded-opentype'),  url('../fonts/Roboto-Regular/Roboto-Regular.woff') format('woff'), url('../fonts/Roboto-Regular/Roboto-Regular.ttf')  format('truetype'), url('../fonts/Roboto-Regular/Roboto-Regular.svg#Roboto-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  //font-display: swap;
+}
+
+
+
+
+
+
+
