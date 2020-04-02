@@ -1,0 +1,8 @@
+
+@font-face {
+  font-family: 'FiraSans-Italic';
+  src: url('FiraSans-Italic.eot?#iefix') format('embedded-opentype'),  url('FiraSans-Italic.otf')  format('opentype'),
+	     url('FiraSans-Italic.woff') format('woff'), url('FiraSans-Italic.ttf')  format('truetype'), url('FiraSans-Italic.svg#FiraSans-Italic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

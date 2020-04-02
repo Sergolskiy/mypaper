@@ -12,8 +12,21 @@ $(document).ready(function(){
       $(this).attr('data-blazy',  img );
     });
   });
-  
+
   var bLazy = new Blazy();
+
+  $('.owl-carousel').owlCarousel({
+    loop:false,
+    nav:true,
+    dots: true,
+    items: 1
+  });
+
+  if($('.owl-carousel').length > 0){
+    var slides = $('.owl-dots').width();
+    $('.owl-nav').width(slides + 64);
+  }
+
 
 
 });
