@@ -16,6 +16,7 @@ $(document).ready(function(){
   var bLazy = new Blazy();
 
   $('.owl-carousel').owlCarousel({
+    margin: 20,
     loop:false,
     nav:true,
     dots: true,
@@ -27,7 +28,75 @@ $(document).ready(function(){
     $('.owl-nav').width(slides + 64);
   }
 
+  $(document).scroll(function () {
+    var top = $(document).scrollTop();
 
+    if($('.home-scroll').length > 0){
+
+    } else {
+      if (top < 3) {
+        $(".header").removeClass('header--scrolled');
+      } else {
+        $(".header").addClass('header--scrolled');
+      }
+    }
+
+  });
+
+
+  var move = false;
+
+  $('#fullpage').fullpage({
+    navigation: true,
+    slidesNavigation: true,
+    controlArrows: false,
+    anchors: ['1', '2', '3', '4', '5', '6', '7'],
+
+    afterLoad: function(anchorLink, index, direction) {
+      // console.log($('#fullpage .section').length);
+
+      if(index === $('#fullpage .section').length) {
+        $.fn.fullpage.setAutoScrolling(false);
+        $.fn.fullpage.setFitToSection(false);
+      }
+
+      $(document).scroll(function () {
+        var last = $('#fullpage').find('.section').last();
+        var offset2 = last.offset();
+        var w = $(window);
+
+        if(offset2.top - w.scrollTop() > 0){
+          $.fn.fullpage.setAutoScrolling(true);
+          $.fn.fullpage.setFitToSection(true);
+        }
+      });
+    },
+    onLeave: function(anchorLink, index, destination){
+
+      $('.home-slider-dot--active').removeClass('home-slider-dot--active');
+      $('.home-slider-dot').eq(index -1).addClass('home-slider-dot--active');
+
+
+
+
+    },
+  });
+
+
+  $('.home-slider-dot').mousedown(function () {
+    $('#fp-nav li').eq($(this).index()).find('a').click();
+  });
+
+
+  $('.home-screen__tabs-i').click(function () {
+    $('.home-screen__tabs-i').removeClass('home-screen__tabs-i--active');
+    $(this).addClass('home-screen__tabs-i--active');
+
+    var index = $(this).index()+1;
+    $('.home-screen__right-tabs-img').attr('src', $('.home-screen__right-tabs-img').attr('data-img-'+index));
+  });
+
+  $('.home-scroll__item--school').addClass('animate-on');
 
 });
 
