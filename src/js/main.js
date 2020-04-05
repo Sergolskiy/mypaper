@@ -76,9 +76,6 @@ $(document).ready(function(){
       $('.home-slider-dot--active').removeClass('home-slider-dot--active');
       $('.home-slider-dot').eq(index -1).addClass('home-slider-dot--active');
 
-
-
-
     },
   });
 
@@ -97,6 +94,24 @@ $(document).ready(function(){
   });
 
   $('.home-scroll__item--school').addClass('animate-on');
+
+
+  $('.has-submenu').hover(function () {
+    $(this).addClass('active');
+    $(this).find('.header__submenu').addClass('header__submenu--active');
+  }, function () {
+    $(this).removeClass('active');
+    $(this).find('.header__submenu').removeClass('header__submenu--active');
+  });
+
+  $('.has-submenu-second').hover(function () {
+    $(this).addClass('active');
+    $(this).find('.header__submenu-second-wrap').addClass('header__submenu-second-wrap--active');
+  }, function () {
+    $(this).removeClass('active');
+    $(this).find('.header__submenu-second-wrap').removeClass('header__submenu-second-wrap--active');
+  });
+
 
 });
 
