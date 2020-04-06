@@ -45,39 +45,41 @@ $(document).ready(function(){
 
 
   var move = false;
+  if($(window).width() > 760){
+    $('#fullpage').fullpage({
+      navigation: true,
+      slidesNavigation: true,
+      controlArrows: false,
+      anchors: ['1', '2', '3', '4', '5', '6', '7'],
 
-  $('#fullpage').fullpage({
-    navigation: true,
-    slidesNavigation: true,
-    controlArrows: false,
-    anchors: ['1', '2', '3', '4', '5', '6', '7'],
+      afterLoad: function(anchorLink, index, direction) {
+        // console.log($('#fullpage .section').length);
 
-    afterLoad: function(anchorLink, index, direction) {
-      // console.log($('#fullpage .section').length);
-
-      if(index === $('#fullpage .section').length) {
-        $.fn.fullpage.setAutoScrolling(false);
-        $.fn.fullpage.setFitToSection(false);
-      }
-
-      $(document).scroll(function () {
-        var last = $('#fullpage').find('.section').last();
-        var offset2 = last.offset();
-        var w = $(window);
-
-        if(offset2.top - w.scrollTop() > 0){
-          $.fn.fullpage.setAutoScrolling(true);
-          $.fn.fullpage.setFitToSection(true);
+        if(index === $('#fullpage .section').length) {
+          $.fn.fullpage.setAutoScrolling(false);
+          $.fn.fullpage.setFitToSection(false);
         }
-      });
-    },
-    onLeave: function(anchorLink, index, destination){
 
-      $('.home-slider-dot--active').removeClass('home-slider-dot--active');
-      $('.home-slider-dot').eq(index -1).addClass('home-slider-dot--active');
+        $(document).scroll(function () {
+          var last = $('#fullpage').find('.section').last();
+          var offset2 = last.offset();
+          var w = $(window);
 
-    },
-  });
+          if(offset2.top - w.scrollTop() > 0){
+            $.fn.fullpage.setAutoScrolling(true);
+            $.fn.fullpage.setFitToSection(true);
+          }
+        });
+      },
+      onLeave: function(anchorLink, index, destination){
+
+        $('.home-slider-dot--active').removeClass('home-slider-dot--active');
+        $('.home-slider-dot').eq(index -1).addClass('home-slider-dot--active');
+
+      },
+    });
+  }
+
 
 
   $('.home-slider-dot').mousedown(function () {
@@ -110,6 +112,10 @@ $(document).ready(function(){
   }, function () {
     $(this).removeClass('active');
     $(this).find('.header__submenu-second-wrap').removeClass('header__submenu-second-wrap--active');
+  });
+
+  $('.header__mobile-menu').click(function () {
+    $('.header__menu').toggleClass('open');
   });
 
 
