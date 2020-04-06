@@ -1,0 +1,56 @@
+extends _layout
+
+block vars
+	- var pageTitle = "Home page";
+	- var pageClass = "pageerror";
+
+block content
+	//.webp-img(data-webp="./img/Rectangle5.webp" data-img="./img/Rectangle5.jpg")
+
+		<picture>
+			<source srcset="./img/awesomeWebPImage.webp" type="image/webp">
+			<source srcset="./img/creakyOldJPEG.jpg" type="image/jpeg">
+			<img src="./img/creakyOldJPEG.jpg" alt="Alt Text!">
+		</picture>
+
+	div.main-wrap
+
+		.page-404
+			.page-404__top
+				.page-404__left
+					.page-404__inscription 404
+					.page-404__title Page Not Found
+					.page-404__txt We are sorry, but the page you looking for does not exist.
+					.page-404__btn
+						a(href="#").site-btn.btn-white take me home
+
+				.page-404__right
+					img(src="./img/home/404-img.svg")
+
+
+		.over-footer-block
+			.home-screen
+				.home-screen__left
+					.mobile-home-screen-img
+						img(src="img/home/img6.svg" alt="img")
+					.home-screen__title Hire the best writer
+					.home-screen__caption Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+					.home-screen__btns
+						a.site-btn.btn-violet Order now
+				.home-screen__right
+					img(src="img/home/img6.svg" alt="img")
+
+
+
+			.subscribe
+				.subscribe-form
+					.subscribe-form__left
+						.subscribe-form__title Subscribe to our newsletter
+					.subscribe-form__right
+						form
+							input(type='text' placeholder='Your Email').subscribe-form__input
+							a(href="#").subscribe-form__btn.site-btn subscribe
+
+
+
+
