@@ -65,6 +65,8 @@ gulp.task('css-libs', () => {
   return gulp.src([
       'node_modules/normalize.css/normalize.css',
       'node_modules/owl.carousel/dist/assets/owl.carousel.css',
+      // 'node_modules/bootstrap/dist/css/bootstrap.css',
+      // 'node_modules/bootstrap-select/dist/css/bootstrap-select.css',
       // 'node_modules/lightbox2/dist/css/lightbox.min.css',
       // 'node_modules/aos/dist/aos.css'
   ])
@@ -81,6 +83,8 @@ gulp.task('js-libs', () => {
       'node_modules/jquery/dist/jquery.min.js',
       // 'node_modules/lightbox2/dist/js/lightbox.min.js',
       // 'node_modules/aos/dist/aos.js',
+      // 'node_modules/bootstrap/dist/js/bootstrap.js',
+      // 'node_modules/bootstrap-select/dist/js/bootstrap-select.js',
       'node_modules/blazy/blazy.min.js',
       'node_modules/owl.carousel/dist/owl.carousel.js',
     ])

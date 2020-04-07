@@ -118,6 +118,7 @@ $(document).ready(function(){
     $('.header__menu').toggleClass('open');
   });
 
+  $( ".select" ).selectmenu();
 
 });
 

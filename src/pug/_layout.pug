@@ -15,6 +15,7 @@ html(lang="en")
 		link(rel='stylesheet', href='css/libs.min.css')
 		link(rel='stylesheet', href='css/style.min.css')
 		link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.css')
+		link(rel='stylesheet', href='//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css')
 
 	body(class="page " + pageClass)
 		.page__wrapper
@@ -26,5 +27,6 @@ html(lang="en")
 			include modules/_footer
 		block scripts
 			script(src='js/libs.min.js')
+			script(src='https://code.jquery.com/ui/1.12.1/jquery-ui.js')
 			script(src='https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.js')
 			script(src='js/main.min.js')

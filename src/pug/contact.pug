@@ -1,0 +1,74 @@
+extends _layout
+
+block vars
+	- var pageTitle = "Home page";
+	- var pageClass = "pageerror";
+
+block content
+	//.webp-img(data-webp="./img/Rectangle5.webp" data-img="./img/Rectangle5.jpg")
+
+		<picture>
+			<source srcset="./img/awesomeWebPImage.webp" type="image/webp">
+			<source srcset="./img/creakyOldJPEG.jpg" type="image/jpeg">
+			<img src="./img/creakyOldJPEG.jpg" alt="Alt Text!">
+		</picture>
+
+	div.main-wrap
+
+		.page-contact
+			.page-contact__top
+				.page-contact__title.site-title-center Contact
+				.page-contact__subtitle.site-txt-center Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+				.page-contact__form
+					form
+						input(type="text" placeholder="Phone number")
+						a(href="#").page-contact__btn call me back
+
+				.page-contact__info
+					.page-contact__item
+						.page-contact__img
+							include ../img/contact/contact-1.svg
+						.page-contact__name Phone:
+						a(href="tel:+18887646763").page-contact__link +1(888) 764-6763
+					.page-contact__item
+						.page-contact__img
+							include ../img/contact/contact-2.svg
+						.page-contact__name I haven't ordered yet.
+						a(href="mailto:sales@acemypaper.com").page-contact__link sales@acemypaper.com
+						.page-contact__name I have an order in progress.
+						a(href="mailto:support@acemypaper.com").page-contact__link support@acemypaper.com
+						.page-contact__name I need clarification on payment.
+						a(href="mailto:billing@acemypaper.com").page-contact__link billing@acemypaper.com
+					.page-contact__item
+						.page-contact__img
+							include ../img/contact/contact-3.svg
+						.page-contact__name Work hours:
+						a(href="#").page-contact__txt Mon 00:00 – Sun 23:59
+
+
+		.over-footer-block
+			.home-screen
+				.home-screen__left
+					.mobile-home-screen-img
+						img(src="img/home/img6.svg" alt="img")
+					.home-screen__title Hire the best writer
+					.home-screen__caption Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+					.home-screen__btns
+						a.site-btn.btn-violet Order now
+				.home-screen__right
+					img(src="img/home/img6.svg" alt="img")
+
+
+
+			.subscribe
+				.subscribe-form
+					.subscribe-form__left
+						.subscribe-form__title Subscribe to our newsletter
+					.subscribe-form__right
+						form
+							input(type='text' placeholder='Your Email').subscribe-form__input
+							a(href="#").subscribe-form__btn.site-btn subscribe
+
+
+
+
