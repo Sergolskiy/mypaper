@@ -1,0 +1,179 @@
+extends _layout
+
+block vars
+	- var pageTitle = "Home page";
+	- var pageClass = "pageerror";
+
+block content
+	//.webp-img(data-webp="./img/Rectangle5.webp" data-img="./img/Rectangle5.jpg")
+
+		<picture>
+			<source srcset="./img/awesomeWebPImage.webp" type="image/webp">
+			<source srcset="./img/creakyOldJPEG.jpg" type="image/jpeg">
+			<img src="./img/creakyOldJPEG.jpg" alt="Alt Text!">
+		</picture>
+
+	div.main-wrap
+
+		.page-pricing
+			.page-pricing__top
+				.page-pricing__title.site-title-center Pricing
+				.page-pricing__items-wrap
+					.page-pricing__items
+						.page-pricing__item.active
+							.page-pricing__item-img
+								img(src="img/pricing/pricing-icon.png")
+							.page-pricing__item-name High School
+							.page-pricing__item-price
+								span.page-pricing__item-small from
+								.page-pricing__item-big
+									span.page-pricing__item-dollar $
+									span.page-pricing__item-count 11
+									span.page-pricing__item-cent 98
+								span.page-pricing__item-small per <br> 100 words
+							a(href="#").page-pricing__item-link view Sample
+						.page-pricing__item
+							.page-pricing__item-img
+								img(src="img/pricing/pricing-icon-2.png")
+							.page-pricing__item-name College
+							.page-pricing__item-price
+								span.page-pricing__item-small from
+								.page-pricing__item-big
+									span.page-pricing__item-dollar $
+									span.page-pricing__item-count 11
+									span.page-pricing__item-cent 98
+								span.page-pricing__item-small per <br> 100 words
+							a(href="#").page-pricing__item-link view Sample
+						.page-pricing__item
+							.page-pricing__item-img
+								img(src="img/pricing/pricing-icon-3.png")
+							.page-pricing__item-name PHD
+							.page-pricing__item-price
+								span.page-pricing__item-small from
+								.page-pricing__item-big
+									span.page-pricing__item-dollar $
+									span.page-pricing__item-count 11
+									span.page-pricing__item-cent 98
+								span.page-pricing__item-small per <br> 100 words
+							a(href="#").page-pricing__item-link view Sample
+
+					.page-pricing__services
+						.page-pricing__services-mobile.active
+							.page-pricing__item-name High School
+							.page-pricing__item-price
+								span.page-pricing__item-small from
+								.page-pricing__item-big
+									span.page-pricing__item-dollar $
+									span.page-pricing__item-count 11
+									span.page-pricing__item-cent 98
+								span.page-pricing__item-small per <br> 100 words
+							a(href="#").page-pricing__services-btn.site-btn.btn-violet Do my paper
+							a.site-show-btn(href="#")
+								span view Sample
+
+
+						.page-pricing__services-mobile
+							.page-pricing__item-name College
+							.page-pricing__item-price
+								span.page-pricing__item-small from
+								.page-pricing__item-big
+									span.page-pricing__item-dollar $
+									span.page-pricing__item-count 11
+									span.page-pricing__item-cent 98
+								span.page-pricing__item-small per <br> 100 words
+							a(href="#").page-pricing__services-btn.site-btn.btn-violet Do my paper
+							a.site-show-btn(href="#")
+								span view Sample
+
+						.page-pricing__services-mobile
+							.page-pricing__item-name PHD
+							.page-pricing__item-price
+								span.page-pricing__item-small from
+								.page-pricing__item-big
+									span.page-pricing__item-dollar $
+									span.page-pricing__item-count 11
+									span.page-pricing__item-cent 98
+								span.page-pricing__item-small per <br> 100 words
+							a(href="#").page-pricing__services-btn.site-btn.btn-violet Do my paper
+							a.site-show-btn(href="#")
+								span view Sample
+
+						.page-pricing__services-title Our writing services include:
+						.page-pricing__services-list.page-seo__second-inner
+							ul.page-seo__list
+								li Lorem ipsum dolor sit amet, consectetur Ddipisicing
+								li sed do eiusmod tempor Encididunt ut labore et
+								li Ut enim ad minim veniam, quis nostrud Exercitation
+								li ullamco laboris nisi ut aliquip
+								li ex ea commodo consequat. Duis aute irure dolor in
+
+						.page-pricing__services-btns
+							a(href="#").page-pricing__services-btn.site-btn.btn-violet Do my paper
+							.page-pricing__services-img
+								img(src="img/pricing/pricing-btn.png")
+
+					.page-pricing__more
+						a(href="#").page-pricing__more-link Get more. Pay less.
+
+
+		.page-pricing__loyalty
+			.page-pricing__loyalty-inner
+				.page-pricing__loyalty-left.tablet
+					img(src="img/pricing/pricing-img.svg")
+				.page-pricing__loyalty-title.site-title-center Loyalty program
+				.page-pricing__loyalty-subtitle.site-txt-center Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+
+				.page-pricing__loyalty-conent
+					.page-pricing__loyalty-left
+						img(src="img/pricing/pricing-img.svg")
+					.page-pricing__loyalty-right
+						.page-pricing__loyalty-item
+							.page-pricing__loyalty-top
+								.page-pricing__loyalty-count 5
+								.page-pricing__loyalty-percent %
+								.page-pricing__loyalty-type OFF
+							.page-pricing__loyalty-bottom all-time total: 25+ pages
+						.page-pricing__loyalty-item
+							.page-pricing__loyalty-top
+								.page-pricing__loyalty-count 10
+								.page-pricing__loyalty-percent %
+								.page-pricing__loyalty-type OFF
+							.page-pricing__loyalty-bottom all-time total: 50+ pages
+						.page-pricing__loyalty-item
+							.page-pricing__loyalty-top
+								.page-pricing__loyalty-count 15
+								.page-pricing__loyalty-percent %
+								.page-pricing__loyalty-type OFF
+							.page-pricing__loyalty-bottom all-time total: 100+ pages
+
+
+
+
+
+
+		.over-footer-block
+			.home-screen
+				.home-screen__left
+					.mobile-home-screen-img
+						img(src="img/home/img6.svg" alt="img")
+					.home-screen__title Hire the best writer
+					.home-screen__caption Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+					.home-screen__btns
+						a.site-btn.btn-violet Order now
+				.home-screen__right
+					img(src="img/home/img6.svg" alt="img")
+
+
+
+			.subscribe
+				.subscribe-form
+					.subscribe-form__left
+						.subscribe-form__title Subscribe to our newsletter
+					.subscribe-form__right
+						form
+							input(type='text' placeholder='Your Email').subscribe-form__input
+							a(href="#").subscribe-form__btn.site-btn subscribe
+
+
+
+
