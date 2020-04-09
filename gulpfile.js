@@ -86,6 +86,7 @@ gulp.task('js-libs', () => {
       // 'node_modules/bootstrap/dist/js/bootstrap.js',
       // 'node_modules/bootstrap-select/dist/js/bootstrap-select.js',
       'node_modules/blazy/blazy.min.js',
+      'node_modules/inputmask/dist/jquery.inputmask.js',
       'node_modules/owl.carousel/dist/owl.carousel.js',
     ])
     .pipe(gulp.dest('dist/js/libs/'))

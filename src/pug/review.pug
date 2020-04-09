@@ -88,15 +88,28 @@ block content
 									.review__form-title Leave Your Review
 									.review__form-contain
 										.review__form-left
-											input(type="text" placeholder="NAME")
-											select.select
-												option LOCATION
-											select.select
-												option RATE
+											div
+												input(type="text" placeholder="NAME")
+												span.error Error message
+											div
+												select.select
+													option(value="0") LOCATION
+													option(value="1") Kansas, USA
+													option(value="2") Kansas, USA
+													option(value="3") Kansas, USA
+												span.error Error message
+											div
+												select.select
+													option(value="0") RATE
+													option(value="1") RATE
+													option(value="2") RATE
+													option(value="3") RATE
+												span.error Error message
 										.review__form-right
 											textarea(placeholder="MASSAGE")
+											span.error Error message
 									.review__form-btns
-										a(href="#").review__form-btn Send
+										a(href="#").review__form-btn.site-btn.btn-violet Send
 
 					h3 Lorem ipsum dolor sit amet, consectetur
 					p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore etliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
@@ -125,7 +138,9 @@ block content
 						.subscribe-form__title Subscribe to our newsletter
 					.subscribe-form__right
 						form
-							input(type='text' placeholder='Your Email').subscribe-form__input
+							div
+								input(type='text' placeholder='Your Email').subscribe-form__input
+								span.error Error message
 							a(href="#").subscribe-form__btn.site-btn subscribe
 
 

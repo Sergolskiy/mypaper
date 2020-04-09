@@ -163,6 +163,56 @@ $(document).ready(function(){
       $('.home-screen__showing-tab-item').eq($(this).index()).addClass('active');
   });
 
+
+  $('.review__form-btn, .subscribe-form__btn').click(function (e) {
+    e.preventDefault();
+    $(this).closest('form').find('input').each(function () {
+      if($(this).val() === ''){
+        $(this).parent().addClass('error-field');
+        $(this).parent().removeClass('correct');
+      } else {
+        $(this).parent().addClass('correct');
+        $(this).parent().removeClass('error-field');
+      }
+    });
+
+    $(this).closest('form').find('textarea').each(function () {
+      if($(this).val() === ''){
+        $(this).parent().addClass('error-field');
+        $(this).parent().removeClass('correct');
+      } else {
+        $(this).parent().addClass('correct');
+        $(this).parent().removeClass('error-field');
+      }
+    });
+
+    $(this).closest('form').find('select').each(function () {
+      if($(this).val() === '0'){
+        $(this).parent().addClass('error-field');
+        $(this).parent().removeClass('correct');
+      } else {
+        $(this).parent().addClass('correct');
+        $(this).parent().removeClass('error-field');
+      }
+    });
+  });
+
+  $('input, textarea, .ui-selectmenu-button, .phone').click(function () {
+      $(this).parent().removeClass('error-field');
+  });
+
+  $('.phone').inputmask("+1 999 999 99 99");
+
+  $('.page-contact__btn').click(function () {
+    if($(this).parent().find('input').val().length === 16 && $(this).parent().find('input').val().indexOf('_') === -1){
+      $(this).prev().addClass('correct');
+      $(this).prev().removeClass('error-field');
+    } else {
+      $(this).prev().addClass('error-field');
+      $(this).prev().removeClass('correct');
+    }
+  });
+
 });
 
 
