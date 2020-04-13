@@ -14,6 +14,12 @@ $(document).ready(function(){
   });
 
   var bLazy = new Blazy();
+  if($(document).width() < 760){
+    var bLazy = new Blazy({
+      selector: '.mobile-lazy',
+    });
+  }
+
 
   $('.owl-carousel').owlCarousel({
     margin: 20,
@@ -146,6 +152,13 @@ $(document).ready(function(){
     $('.header__submenu-second-wrap').removeClass('header__submenu-second-wrap--active');
     $('.has-submenu-second').removeClass('active');
   });
+
+  $(document).on('click', function (e) {
+
+    if($(e.target).closest('.header__menu.open').length === 0 && $(e.target).closest('.header__mobile-menu').length === 0 && $('.header__menu.open').length > 0) {
+      $('.header__mobile-menu').click();
+    }
+  })
 
   $( ".select" ).selectmenu();
 
