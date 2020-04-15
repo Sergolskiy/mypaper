@@ -56,7 +56,8 @@ block content
                 .home-screen__showing-txt Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
                 .home-screen__showing-btns
                   a.site-small-btn(href="#") Order Now
-                  a.site-show-btn(href="#") Sample
+                  a.site-show-btn(href="#")
+                    span Sample
               .home-screen__showing-i
                 .home-screen__showing-top
                   .home-screen__showing-icon
@@ -67,7 +68,8 @@ block content
                 .home-screen__showing-txt Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
                 .home-screen__showing-btns
                   a.site-small-btn(href="#") Order Now
-                  a.site-show-btn(href="#") Sample
+                  a.site-show-btn(href="#")
+                    span Sample
 
             .home-screen__showing-mobile
               .home-screen__showing-tabs
@@ -331,9 +333,12 @@ block content
         .subscribe-form__right
           form
             div
-              input(type='text' placeholder='Your Email').subscribe-form__input
+              input(type='text' placeholder='Your Email').subscribe-form__input.email-field
               span.error Error message
             a(href="#").subscribe-form__btn.site-btn subscribe
+        .subscribe-form-success
+          .subscribe-form-success__txt Awesome. Now you'll never miss out.
+          .subscribe-form-success__img
 
       .seo-txt__inner
         .seo-txt__title Lorem ipsum dolor sit amet,

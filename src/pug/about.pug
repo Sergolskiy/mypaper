@@ -1,62 +1,65 @@
 extends _layout
 
 block vars
-	- var pageTitle = "Home page";
-	- var pageClass = "pageerror";
+  - var pageTitle = "Home page";
+  - var pageClass = "pageerror";
 
 block content
-	//.webp-img(data-webp="./img/Rectangle5.webp" data-img="./img/Rectangle5.jpg")
+  //.webp-img(data-webp="./img/Rectangle5.webp" data-img="./img/Rectangle5.jpg")
 
-		<picture>
-			<source srcset="./img/awesomeWebPImage.webp" type="image/webp">
-			<source srcset="./img/creakyOldJPEG.jpg" type="image/jpeg">
-			<img src="./img/creakyOldJPEG.jpg" alt="Alt Text!">
-		</picture>
+    <picture>
+      <source srcset="./img/awesomeWebPImage.webp" type="image/webp">
+      <source srcset="./img/creakyOldJPEG.jpg" type="image/jpeg">
+      <img src="./img/creakyOldJPEG.jpg" alt="Alt Text!">
+    </picture>
 
-	div.main-wrap
+  div.main-wrap
 
-		.page-about
-			.page-about__top
-				.page-about__mobile-img.tablet
-					img(src="img/about/about-img.svg")
-				.page-about__title.site-title-center About
-				.page-about__subtitle.site-txt-center Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+    .page-about
+      .page-about__top
+        .page-about__mobile-img.tablet
+          img(src="img/about/about-img.svg")
+        .page-about__title.site-title-center About
+        .page-about__subtitle.site-txt-center Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
 
-				.page-about__content
-					.page-about__left
-						img(src="img/about/about-img.svg")
-					.page-about__right
-						.page-about__txt-title Lorem ipsum dolor sit amet,
-						.page-about__txt
-							p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore etliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-							p Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-
-
-
-		.over-footer-block
-			.home-screen
-				.home-screen__left
-					.mobile-home-screen-img
-						img(src="img/home/img6.svg" alt="img")
-					.home-screen__title Hire the best writer
-					.home-screen__caption Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-					.home-screen__btns
-						a.site-btn.btn-violet Order now
-				.home-screen__right
-					img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/home/img6.svg" alt="img").b-lazy
+        .page-about__content
+          .page-about__left
+            img(src="img/about/about-img.svg")
+          .page-about__right
+            .page-about__txt-title Lorem ipsum dolor sit amet,
+            .page-about__txt
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore etliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+              p Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
 
 
 
-			.subscribe
-				.subscribe-form
-					.subscribe-form__left
-						.subscribe-form__title Subscribe to our newsletter
-					.subscribe-form__right
-						form
-							div
-								input(type='text' placeholder='Your Email').subscribe-form__input
-								span.error Error message
-							a(href="#").subscribe-form__btn.site-btn subscribe
+    .over-footer-block
+      .home-screen
+        .home-screen__left
+          .mobile-home-screen-img
+            img(src="img/home/img6.svg" alt="img")
+          .home-screen__title Hire the best writer
+          .home-screen__caption Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+          .home-screen__btns
+            a.site-btn.btn-violet Order now
+        .home-screen__right
+          img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/home/img6.svg" alt="img").b-lazy
+
+
+
+      .subscribe
+        .subscribe-form
+          .subscribe-form__left
+            .subscribe-form__title Subscribe to our newsletter
+          .subscribe-form__right
+            form
+              div
+                input(type='text' placeholder='Your Email').subscribe-form__input.email-field
+                span.error Error message
+              a(href="#").subscribe-form__btn.site-btn subscribe
+          .subscribe-form-success
+            .subscribe-form-success__txt Awesome. Now you'll never miss out.
+            .subscribe-form-success__img
 
 
 

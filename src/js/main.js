@@ -179,6 +179,23 @@ $(document).ready(function(){
 
   $('.review__form-btn, .subscribe-form__btn').click(function (e) {
     e.preventDefault();
+
+    if($(this).closest('form').find('input').hasClass('email-field')){
+      var reg = /^[\w\.\d-_]+@[\w\.\d-_]+\.\w{2,4}$/i;
+
+
+      if(reg.test($(this).closest('form').find('input').val()) == false) {
+        $(this).closest('form').addClass('error-field');
+        return;
+      } else {
+        $(this).closest('form').removeClass('error-field');
+        $('.subscribe-form-success').addClass('active');
+        return;
+      }
+    }
+
+
+
     $(this).closest('form').find('input').each(function () {
       if($(this).val() === ''){
         $(this).parent().addClass('error-field');
@@ -208,10 +225,14 @@ $(document).ready(function(){
         $(this).parent().removeClass('error-field');
       }
     });
+
+    if($(this).closest('form').find('.error-field').length === 0 && $(this).closest('.review__form').length > 0){
+        $('.review__form-success').addClass('active');
+    }
   });
 
   $('input, textarea, .ui-selectmenu-button, .phone').click(function () {
-      $(this).parent().removeClass('error-field');
+      $(this).closest('form').removeClass('error-field');
   });
 
   $('.phone').inputmask("+1 999 999 99 99");
@@ -220,6 +241,9 @@ $(document).ready(function(){
     if($(this).parent().find('input').val().length === 16 && $(this).parent().find('input').val().indexOf('_') === -1){
       $(this).prev().addClass('correct');
       $(this).prev().removeClass('error-field');
+
+      $('.page-contact__form form').hide();
+      $('.page-contact__form-success').addClass('active');
     } else {
       $(this).prev().addClass('error-field');
       $(this).prev().removeClass('correct');
