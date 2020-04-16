@@ -1,4 +1,31 @@
+var iPhone = /iPhone/.test(navigator.userAgent) && !window.MSStream;
+if(iPhone){
+    $('body').addClass('iphone');
+}
+
+if($(document).width()<760){
+  $('body').removeClass('loadpage');
+}
+
+// $('body').addClass('loadpage');
+
+
 $(document).ready(function(){
+  if($(document).width()>760) {
+    setTimeout(function () {
+      $('body').addClass('loaded');
+      second();
+    }, 100);
+
+    function second() {
+      setTimeout(function () {
+        $('body').removeClass('loadpage');
+        $('body').removeClass('loaded');
+      }, 1000);
+    }
+  }
+
+  var iPhone = /iPhone/.test(navigator.userAgent) && !window.MSStream;
 
   // checking browser for WEBP
   hasWebP().then(function () {
@@ -14,7 +41,7 @@ $(document).ready(function(){
   });
 
   var bLazy = new Blazy();
-  if($(document).width() < 760){
+  if($(document).width() < 760 || iPhone){
     var bLazy = new Blazy({
       selector: '.mobile-lazy',
     });
@@ -23,7 +50,7 @@ $(document).ready(function(){
 
   $('.owl-carousel').owlCarousel({
     margin: 20,
-    loop:false,
+    loop:true,
     nav:true,
     dots: true,
     items: 1
@@ -57,7 +84,10 @@ $(document).ready(function(){
 
 
   var move = false;
-  if($(window).width() > 760){
+
+
+
+  if($(window).width() > 760  && !iPhone){
     $('#fullpage').fullpage({
       navigation: true,
       slidesNavigation: true,
@@ -104,7 +134,11 @@ $(document).ready(function(){
     $(this).addClass('home-screen__tabs-i--active');
 
     var index = $(this).index()+1;
+    console.log($('.home-screen__right-tabs-img').attr('data-img-' + index));
     $('.home-screen__right-tabs-img').attr('src', $('.home-screen__right-tabs-img').attr('data-img-'+index));
+
+    $('.home-screen__tabs-c-i').removeClass('home-screen__tabs-c-i--active');
+    $('.home-screen__tabs-c-i').eq($(this).index()).addClass('home-screen__tabs-c-i--active');
   });
 
   $('.home-scroll__item--school').addClass('animate-on');

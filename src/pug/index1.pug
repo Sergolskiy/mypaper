@@ -2,7 +2,7 @@ extends _layout
 
 block vars
   - var pageTitle = "Home page";
-  - var pageClass = "homepage";
+  - var pageClass = "homepage loadpage";
 
 block content
   //.webp-img(data-webp="./img/Rectangle5.webp" data-img="./img/Rectangle5.jpg")
@@ -122,17 +122,17 @@ block content
             .home-screen__caption From a team comprising the top 2% of the academic talent out there, you get the expert that best fits your project.
             .mobile-home-screen-img
               .home-screen__right-tabs
-                img.home-screen__right-tabs-img(src="img/home/img-3-1.png"
-                data-img-1="img/home/img-3-1.png"
-                data-img-2="img/home/img-3-2.png"
-                data-img-3="img/home/img-3-3.png"
-                data-img-4="img/home/img-3-4.png"
-                data-img-5="img/home/img2.png"
+                img.home-screen__right-tabs-img(src="img/home/img-3-4.svg"
+                data-img-1="img/home/img-3-1.svg"
+                data-img-2="img/home/img-3-2.svg"
+                data-img-3="img/home/img-3-3.svg"
+                data-img-4="img/home/img-3-4.svg"
+                data-img-5="img/home/img-3-5.svg"
                 alt="img"
                 )
             .home-screen__tabs
               .home-screen__tabs-items
-                a(href='javascript:void(0)').home-screen__tabs-i.home-screen__tabs-i--active
+                a(href='javascript:void(0)').home-screen__tabs-i
                   span 1
                   span 100%
                 a(href='javascript:void(0)').home-screen__tabs-i
@@ -141,41 +141,41 @@ block content
                 a(href='javascript:void(0)').home-screen__tabs-i
                   span 3
                   span 20%
-                a(href='javascript:void(0)').home-screen__tabs-i
+                a(href='javascript:void(0)').home-screen__tabs-i.home-screen__tabs-i--active
                   span 4
                   span TOP 2%
                 a(href='javascript:void(0)').home-screen__tabs-i
                   span 5
                   span.star
-                    include ../img/home/star.svg
+                    include ../img/home/star-sel.svg
               .home-screen__tabs-content
+                .home-screen__tabs-c-i
+                  .home-screen__tabs-title Start of selection
+                  .home-screen__tabs-txt  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+
+                .home-screen__tabs-c-i
+                  .home-screen__tabs-title Start of selection2
+                  .home-screen__tabs-txt  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+
+                .home-screen__tabs-c-i
+                  .home-screen__tabs-title Start of selection3
+                  .home-screen__tabs-txt  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+
                 .home-screen__tabs-c-i.home-screen__tabs-c-i--active
-                  .home-screen__tabs-title Start of selection
+                  .home-screen__tabs-title Start of selection4
                   .home-screen__tabs-txt  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
 
                 .home-screen__tabs-c-i
-                  .home-screen__tabs-title Start of selection
-                  .home-screen__tabs-txt  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-
-                .home-screen__tabs-c-i
-                  .home-screen__tabs-title Start of selection
-                  .home-screen__tabs-txt  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-
-                .home-screen__tabs-c-i
-                  .home-screen__tabs-title Start of selection
-                  .home-screen__tabs-txt  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-
-                .home-screen__tabs-c-i
-                  .home-screen__tabs-title Start of selection
+                  .home-screen__tabs-title Start of selection5
                   .home-screen__tabs-txt  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
           .home-screen__right
             .home-screen__right-tabs
-              img.home-screen__right-tabs-img(src="img/home/img-3-1.png"
-              data-img-1="img/home/img-3-1.png"
-              data-img-2="img/home/img-3-2.png"
-              data-img-3="img/home/img-3-3.png"
-              data-img-4="img/home/img-3-4.png"
-              data-img-5="img/home/img2.png"
+              img.home-screen__right-tabs-img(src="img/home/img-3-4.svg"
+              data-img-1="img/home/img-3-1.svg"
+              data-img-2="img/home/img-3-2.svg"
+              data-img-3="img/home/img-3-3.svg"
+              data-img-4="img/home/img-3-4.svg"
+              data-img-5="img/home/img-3-5.svg"
               alt="img"
               )
 
@@ -306,24 +306,24 @@ block content
             .home-screen__title Hire the best writer
             .home-screen__caption Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
             .home-screen__btns
-              a.site-btn.btn-violet Order now
+              a(href="#").site-btn.btn-violet Order now
           .home-screen__right
             img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/home/img6.svg" data-lazy="img/home/img6.svg" alt="img").mobile-lazy
 
     .home-slider-dots
-      a(href='#').home-slider-dot.home-slider-dot--active
+      a(href='javascript:void(0)').home-slider-dot.home-slider-dot--active
         span Start
-      a(href='#').home-slider-dot
+      a(href='javascript:void(0)').home-slider-dot
         span 1 step
-      a(href='#').home-slider-dot
+      a(href='javascript:void(0)').home-slider-dot
         span 2 step
-      a(href='#').home-slider-dot
+      a(href='javascript:void(0)').home-slider-dot
         span 3 step
-      a(href='#').home-slider-dot
+      a(href='javascript:void(0)').home-slider-dot
         span 4 step
-      a(href='#').home-slider-dot
+      a(href='javascript:void(0)').home-slider-dot
         span 5 step
-      a(href='#').home-slider-dot
+      a(href='javascript:void(0)').home-slider-dot
         span 6 step
 
     .seo-txt.has-form
