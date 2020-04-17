@@ -6,7 +6,7 @@ header.header
     .header__menu
       ul.header__list
         li.header__item.has-submenu
-          a.header__link(href="javascript:void(0)")
+          a(href="javascript:void(0)" class=(pageActive === "blog" ? "header__link header__link--active" : 'header__link'))
             span Blog
           ul.header__submenu
             li.header__submenu-item.has-submenu-second
@@ -61,11 +61,12 @@ header.header
               a(href="#").header__submenu-link Sociology papers
 
         li.header__item
-          a.header__link(href="javascript:void(0)") Pricing
+          a.header__link(href="javascript:void(0)" class=(pageActive === "pricing" ? "header__link header__link--active" : 'header__link')) Pricing
         li.header__item
-          a.header__link(href="javascript:void(0)") Contact
+          a.header__link(href="javascript:void(0)" class=(pageActive === "contact" ? "header__link header__link--active" : 'header__link')) Contact
 
-      a.header__login-btn(href="#") Log in
+      a.header__login-btn(href="#")
+        span Log in
 
       a.header__btn.site-btn(href="#") Order Now
 

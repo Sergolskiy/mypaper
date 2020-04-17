@@ -2,7 +2,8 @@ extends _layout
 
 block vars
 	- var pageTitle = "Home page";
-	- var pageClass = "pageerror";
+	- var pageClass = "";
+	- var pageActive = "contact";
 
 block content
 	//.webp-img(data-webp="./img/Rectangle5.webp" data-img="./img/Rectangle5.jpg")
@@ -22,7 +23,7 @@ block content
 				.page-contact__form
 					form
 						div
-							input(type="text" placeholder="Phone number").phone
+							input(type="phone" placeholder="Phone number").phone
 							span.error Error message
 						a(href="#").page-contact__btn call me back
 					.page-contact__form-success

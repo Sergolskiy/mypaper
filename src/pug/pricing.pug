@@ -2,7 +2,8 @@ extends _layout
 
 block vars
   - var pageTitle = "Home page";
-  - var pageClass = "pageerror";
+  - var pageClass = "";
+  - var pageActive = "pricing";
 
 block content
   //.webp-img(data-webp="./img/Rectangle5.webp" data-img="./img/Rectangle5.jpg")
@@ -31,6 +32,9 @@ block content
                   span.page-pricing__item-count 11
                   span.page-pricing__item-cent 98
                 span.page-pricing__item-small per <br> 100 words
+              .page-pricing__tablet-view
+                a.site-show-btn(href="#")
+                  span view Sample
               a(href="#").page-pricing__item-link view Sample
             .page-pricing__item
               .page-pricing__item-img
@@ -43,6 +47,9 @@ block content
                   span.page-pricing__item-count 11
                   span.page-pricing__item-cent 98
                 span.page-pricing__item-small per <br> 100 words
+              .page-pricing__tablet-view
+                a.site-show-btn(href="#")
+                  span view Sample
               a(href="#").page-pricing__item-link view Sample
             .page-pricing__item
               .page-pricing__item-img
@@ -55,6 +62,9 @@ block content
                   span.page-pricing__item-count 11
                   span.page-pricing__item-cent 98
                 span.page-pricing__item-small per <br> 100 words
+              .page-pricing__tablet-view
+                a.site-show-btn(href="#")
+                  span view Sample
               a(href="#").page-pricing__item-link view Sample
 
           .page-pricing__services
@@ -116,7 +126,7 @@ block content
             a(href="#").page-pricing__more-link Get more. Pay less.
 
 
-    .page-pricing__loyalty
+    .page-pricing__loyalty(id="loyalty")
       .page-pricing__loyalty-inner
         .page-pricing__loyalty-left.tablet
           img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/pricing/pricing-img.svg").b-lazy
@@ -155,7 +165,7 @@ block content
       .home-screen
         .home-screen__left
           .mobile-home-screen-img
-            img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/home/img6.svg" alt="img")
+            img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/home/img6.svg" alt="img").b-lazy
           .home-screen__title Hire the best writer
           .home-screen__caption Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
           .home-screen__btns

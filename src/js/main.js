@@ -134,11 +134,16 @@ $(document).ready(function(){
     $(this).addClass('home-screen__tabs-i--active');
 
     var index = $(this).index()+1;
-    console.log($('.home-screen__right-tabs-img').attr('data-img-' + index));
-    $('.home-screen__right-tabs-img').attr('src', $('.home-screen__right-tabs-img').attr('data-img-'+index));
+    // console.log($('.home-screen__right-tabs-img').attr('data-img-' + index));
+    $('.home-screen__right-tabs-img').addClass('change');
+
+    setTimeout(function () {
+      $('.home-screen__right-tabs-img').attr('src', $('.home-screen__right-tabs-img').attr('data-img-'+index)).removeClass('change');
+    }, 300);
 
     $('.home-screen__tabs-c-i').removeClass('home-screen__tabs-c-i--active');
     $('.home-screen__tabs-c-i').eq($(this).index()).addClass('home-screen__tabs-c-i--active');
+
   });
 
   $('.home-scroll__item--school').addClass('animate-on');
@@ -169,7 +174,7 @@ $(document).ready(function(){
     });
 
     $('.has-submenu-second').click(function (e) {
-      if($(e.target).hasClass('header__submenu-link') || $(e.target).closest('.header__submenu-link').length > 0) {
+      if($(e.target).hasClass('has-submenu-second') || $(e.target).closest('.header__submenu-link').length > 0) {
         $(this).toggleClass('active');
         $(this).find('.header__submenu-second-wrap').toggleClass('header__submenu-second-wrap--active');
       }
@@ -265,8 +270,12 @@ $(document).ready(function(){
     }
   });
 
-  $('input, textarea, .ui-selectmenu-button, .phone').click(function () {
-      $(this).closest('form').removeClass('error-field');
+  $('input, textarea, .ui-selectmenu-button, .phone').keydown(function () {
+      $(this).closest('.error-field').removeClass('error-field');
+  });
+
+  $('.ui-selectmenu-button').click(function () {
+      $(this).closest('.error-field').removeClass('error-field');
   });
 
   $('.phone').inputmask("+1 999 999 99 99");
@@ -283,6 +292,13 @@ $(document).ready(function(){
       $(this).prev().removeClass('correct');
     }
   });
+
+  $('.page-pricing__more-link').click(function () {
+    $([document.documentElement, document.body]).animate({
+      scrollTop: $("#loyalty").offset().top
+    }, 1000);
+  });
+
 
 });
 
