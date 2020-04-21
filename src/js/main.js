@@ -110,6 +110,9 @@ $(document).ready(function(){
           if(offset2.top - w.scrollTop() > 0){
             $.fn.fullpage.setAutoScrolling(true);
             $.fn.fullpage.setFitToSection(true);
+            console.log(321);
+
+            $('body').addClass('last-slide');
           }
         });
       },
@@ -117,6 +120,13 @@ $(document).ready(function(){
 
         $('.home-slider-dot--active').removeClass('home-slider-dot--active');
         $('.home-slider-dot').eq(index -1).addClass('home-slider-dot--active');
+
+        console.log(index);
+        if(index == 7){
+            // $('body').addClass('last-slide');
+        } else {
+            $('body').removeClass('last-slide');
+        }
 
       },
     });

@@ -67,7 +67,7 @@ body[style="overflow: visible; height: initial;"] .header{
 .site-small-btn,
 .site-btn{
   border: 1px solid #8a7cf9;
-  color: #6f3df2;
+  color: #643fed;
   text-transform: uppercase;
   font-family: 'Roboto';
   font-weight: bold;
@@ -416,6 +416,11 @@ body {
       color: #6f3df2;
       border-bottom: 1px solid #b2a0f6;
     }
+
+    &:active{
+      border-bottom: 1px solid transparent;
+    }
+
   }
 
 
@@ -640,6 +645,20 @@ body {
       .home-screen__btns {
         margin-top: 40px;
       }
+
+      &.fp-section.fp-table{
+        height: calc(100vh - 60px) !important;
+      }
+
+      &:before {
+        content: "";
+        display: block;
+        background: white;
+        width: 100%;
+        height: 120px;
+        position: absolute;
+        bottom: -120px;
+      }
     }
 
   }
@@ -848,6 +867,9 @@ body {
         span{
           border-color: #9278f2;
         }
+        &:before{
+          opacity: 1;
+        }
       }
 
 
@@ -858,8 +880,10 @@ body {
         height: 13px;
         background: url("../img/home/eyes.svg") center center no-repeat;
         margin-right: 7px;
+        opacity: 0.7;
         position: relative;
         top: -2px;
+        transition: 0.3s;
       }
     }
   }
@@ -1196,6 +1220,14 @@ body {
   }
 }
 
+.last-slide .subscribe-form {
+  position: fixed;
+  bottom: 0;
+  opacity: 1;
+  left: 50%;
+  transform: translate(-50%, 0);
+  //transition: 0.3s 0.5s;
+}
 
 .subscribe-form{
   position: relative;
@@ -1213,7 +1245,7 @@ body {
   background: white;
   border-radius: 5px;
   opacity: 0;
-  transition: 0.3s;
+  //transition: 0.3s;
 
   &__title{
     font: 24px 'Fira Sans';
@@ -1251,6 +1283,7 @@ body {
     font: 14px 'Roboto';
     font-weight: 400;
     letter-spacing: 1.4px;
+    width: 243px;
 
     &::placeholder{
       color: #8b8990;
@@ -1479,10 +1512,16 @@ body {
 
   &__txt-icons{
     margin-top: 35px;
-    display: flex;
-    justify-content: space-between;
+    //display: flex;
+    //justify-content: space-between;
   }
+  &__txt-icon{
+    margin-right: 10px;
 
+    &:last-child{
+      margin-right: 0;
+    }
+  }
   &__txt-icon svg{
     &:first-child{
       width: 55px;
@@ -2715,6 +2754,24 @@ body:not(.homepage) .footer__inner{
       opacity: 1;
     }
 
+    &:nth-child(1){
+      .page-pricing__item-img img{
+        width: 50px;
+      }
+    }
+
+    &:nth-child(2){
+      .page-pricing__item-img img{
+        width: 75px;
+      }
+    }
+
+    &:nth-child(3){
+      .page-pricing__item-img img{
+        width: 30px;
+      }
+    }
+
   }
 
   &__item-img{
@@ -2725,6 +2782,7 @@ body:not(.homepage) .footer__inner{
 
     img{
       margin-top: auto;
+      height: 100%;
     }
   }
 
@@ -3017,6 +3075,20 @@ body:not(.homepage) .footer__inner{
 
 
 @media (max-width: 1800px) {
+
+  .home-scroll__item--hire.fp-section.fp-table{
+    height: calc(100vh - 50px)!important;
+  }
+
+  .home-scroll__item--hire:before {
+    content: "";
+    display: block;
+    background: #fff;
+    width: 100%;
+    height: 120px;
+    position: absolute;
+    bottom: -120px;
+  }
 
   .home-screen__tabs-i{
     padding-left: 14px;
@@ -4855,7 +4927,7 @@ body:not(.homepage) .footer__inner{
 
   .subscribe-form__title,
   .over-footer-block .subscribe-form__title {
-    padding-right: 30px;
+    padding-right: 10px;
     //font: 16px Fira Sans;
     //font-weight: 500;
     font-size: 16px;
@@ -5401,6 +5473,9 @@ body:not(.homepage) .footer__inner{
 
 @media (max-width: 760px) {
 
+  .home-scroll__item--hire:before{
+    display: none;
+  }
 
   .footer__col:nth-child(3), .footer__col:nth-child(4) {
     margin-left: 0;
@@ -6239,6 +6314,10 @@ body:not(.homepage) .footer__inner{
 
 
 @media (max-width: 620px) {
+
+  .page-pricing__tablet-view {
+    display: none;
+  }
 
   .page-pricing__item-price{
     display: none;
