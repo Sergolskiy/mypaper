@@ -49,8 +49,8 @@ body[style="overflow: visible; height: initial;"] .subscribe-form{
   opacity: 1;
 }
 
-body[style="overflow: visible;"] .home-slider-dots,
-body[style="overflow: visible; height: initial;"] .home-slider-dots{
+body.nofullpage .home-slider-dots,
+body.nofullpage .home-slider-dots{
   opacity: 0;
 }
 
@@ -649,6 +649,7 @@ body {
     }
     &--hire{
       background: #f4f3ff;
+      position: relative;
 
       .home-screen{
         margin-top: 358px;
@@ -939,6 +940,7 @@ body {
     padding-right: 12px;
     color: #9898ea;
     background: white;
+    transition: .5s;
 
     span:first-child{
       font: 20px 'Fira Sans';
@@ -949,6 +951,11 @@ body {
       font: 15px 'Fira Sans';
       font-weight: 400;
       letter-spacing: 0.75px;
+
+      svg{
+        position: relative;
+        top: 2px;
+      }
     }
 
     &:nth-child(n+2){
@@ -974,6 +981,7 @@ body {
     &--active{
       color: white;
       background: #6f3df2;
+
     }
   }
 
@@ -1006,6 +1014,12 @@ body {
     &--active{
       opacity: 1;
       //display: block;
+
+      .home-screen__tabs-txt,
+      .home-screen__tabs-title{
+        transform: translateX(0);
+        opacity: 1;
+      }
     }
   }
 
@@ -1015,6 +1029,9 @@ body {
     color: #48484b;
     margin-bottom: 12px;
     letter-spacing: 1.2px;
+    transform: translateX(-20px);
+    transition: 0.3s 0.1s;
+    opacity: 0;
   }
 
   &__tabs-txt{
@@ -1022,6 +1039,9 @@ body {
     font-weight: 400;
     letter-spacing: 0.75px;
     color: #9b9aa1;
+    transform: translateX(-20px);
+    transition: 0.3s 0.2s;
+    opacity: 0;
   }
 
   &__list{
@@ -2227,7 +2247,7 @@ body:not(.homepage) .footer__inner{
   .owl-nav{
     position: absolute;
     bottom: 15px;
-    left: 16px;
+    left: 20px;
     height: 0;
     display: flex;
     justify-content: space-between;
@@ -2350,14 +2370,14 @@ body:not(.homepage) .footer__inner{
 .review__form-left input{
   border-radius: 5px;
   border: 1px solid rgb(235, 235, 245);
-  padding: 13px 20px;
+  padding: 11px 20px 13px;
   font: 14px 'Roboto';
   font-weight: 400;
   //line-height: 45px;
   //height: 45px;
   letter-spacing: 1.4px;
   color: #89888e;
-  padding: 12px 0 11px 20px;
+  padding: 12px 0 12px 20px;
 
   &::placeholder {
     font: 14px 'Roboto';
@@ -3383,12 +3403,12 @@ body:not(.homepage) .footer__inner{
   .home-screen__showing-i:nth-child(2) {
     position: relative;
     left: 2px;
-    top: 2px;
+    top: 0;
   }
   .home-screen__showing-i:nth-child(3) {
     position: relative;
-    left: 8px;
-    top: -2px;
+    left: 12px;
+    top: 0;
 
     .home-screen__showing-icon svg{
       width: 22px;
@@ -3415,6 +3435,7 @@ body:not(.homepage) .footer__inner{
   .home-screen__showing-btns .site-small-btn {
     padding-top: 1px;
     min-width: 105px;
+    width: 105px;
     line-height: 29px;
     font-size: 11px;
     letter-spacing: 1.5px;
@@ -3623,7 +3644,7 @@ body:not(.homepage) .footer__inner{
   }
 
   .home-screen__slide-stars svg {
-    margin-right: -3px;
+    margin-right: -1px;
     width: 17px;
   }
 
@@ -4120,13 +4141,13 @@ body:not(.homepage) .footer__inner{
 
   .review__form-left input {
     border: 1px solid #ebebf5;
-    padding: 0 14px;
+    //padding: 0 14px;
     //font: 13px Roboto;
     //font-weight: 400;
     font-size: 13px;
-    line-height: 37px;
-    height: 37px;
-    padding-top: 9px;
+    //line-height: 37px;
+    //height: 37px;
+    //padding-top: 9px;
 
     &::placeholder{
       //font: 13px Roboto;
@@ -4579,6 +4600,14 @@ body:not(.homepage) .footer__inner{
 
 @media (max-width: 1220px) {
 
+  body.homepage .page__wrapper{
+    background: white;
+  }
+
+  .home-scroll__item--school{
+    background: url(../img/home/bg-svg.svg) top right no-repeat;
+  }
+
   .home-screen__showing-i:nth-child(2) {
     left: -7px;
     top: 1px;
@@ -4746,6 +4775,7 @@ body:not(.homepage) .footer__inner{
   .home-screen__showing-btns .site-show-btn{
     margin-left: 0;
     margin-bottom: 20px;
+    font-size: 11px;
   }
 
   .home-screen__showing-title {
@@ -5782,7 +5812,9 @@ body:not(.homepage) .footer__inner{
 }
 
 @media (max-width: 760px) {
-
+  .home-scroll__item--school{
+    background: white;
+  }
   .home-scroll__item.home-scroll__item--school .home-screen {
     margin-top: 85px;
   }
@@ -5915,6 +5947,7 @@ body:not(.homepage) .footer__inner{
     width: 33.3%;
     border-bottom: 1px solid #ebebf5;
     border-right: 0;
+    border-left: 1px solid #eaeaf5;
   }
 
   .home-screen__showing-tab.active{
@@ -5940,6 +5973,7 @@ body:not(.homepage) .footer__inner{
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
     transition: 0.3s;
+    box-shadow: inset 0px -2px 10px -4px rgba(99, 89, 175, 0.08);
 
     span{
       margin-top: 10px;
@@ -5968,6 +6002,10 @@ body:not(.homepage) .footer__inner{
   .home-screen__showing-tab-item .home-screen__showing-btns,
   .home-screen__showing-tab-item .home-screen__showing-txt{
     opacity: 1;
+  }
+
+  .home-screen__showing-title {
+    margin-left: 0;
   }
 
   .home-screen__showing-mobile .home-screen__showing-icon{
@@ -6039,6 +6077,7 @@ body:not(.homepage) .footer__inner{
     padding: 10px 15px;
     width: 20%;
     max-width: 100% !important;
+    box-shadow: inset 0px -2px 10px -4px rgba(99, 89, 175, 0.08);
   }
 
   .home-scroll__item--bring .home-screen {
@@ -6636,6 +6675,11 @@ body:not(.homepage) .footer__inner{
     font-size: 20px;
   }
 
+  .home-scroll__item--choose .home-screen__title{
+    font-size: 26px;
+    line-height: 34px;
+  }
+
 }
 
 
@@ -6742,6 +6786,7 @@ body:not(.homepage) .footer__inner{
     //font: 13px Roboto;
     //font-weight: 400;
     font-size: 11px;
+    font-family: Roboto;
     font-weight: 700;
     letter-spacing: 1.3px;
     display: flex;
@@ -6773,6 +6818,8 @@ body:not(.homepage) .footer__inner{
 @media (max-width: 500px) {
 
 
+  .home-scroll__item--delivery  .home-screen__caption,
+  .home-scroll__item--select2 .home-screen__caption,
   .home-scroll__item--bring .home-screen__caption,
   .home-scroll__item--choose .home-screen__caption {
     margin-top: 13px;
@@ -7013,7 +7060,7 @@ body:not(.homepage) .footer__inner{
   //}
 
   .page-pricing__services-mobile .site-show-btn{
-    letter-spacing: 0;
+    letter-spacing: 0.5px;
   }
 
   .page-pricing__services-title {
@@ -7143,7 +7190,7 @@ body:not(.homepage) .footer__inner{
     line-height: 29px;
     margin-left: 14px;
   }
-
+  .home-screen__showing-i:nth-child(3) .home-screen__showing-icon svg,
   .home-scroll__item--select2 .home-screen__showing-icon svg {
     width: 37px;
     height: 32px;
@@ -7655,3 +7702,5 @@ img.b-lazy{
     margin-right: 8px;
   }
 }
+
+

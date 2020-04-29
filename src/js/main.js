@@ -104,6 +104,7 @@ $(document).ready(function(){
         if(index === $('#fullpage .section').length) {
           $.fn.fullpage.setAutoScrolling(false);
           $.fn.fullpage.setFitToSection(false);
+          $('body').addClass('nofullpage');
         }
 
 
@@ -119,6 +120,7 @@ $(document).ready(function(){
             console.log(321);
 
             $('body').addClass('last-slide');
+            $('body').removeClass('nofullpage');
           }
 
 
@@ -258,19 +260,22 @@ $(document).ready(function(){
     }
 
 
+    var reg2 = /[а-яА-ЯёЁ]/g;
 
     $(this).closest('form').find('input').each(function () {
-      if($(this).val() === ''){
+      if($(this).val() === '' || $(this).val().search(reg2) !==  -1){
         $(this).parent().addClass('error-field');
         $(this).parent().removeClass('correct');
+
       } else {
+
         $(this).parent().addClass('correct');
         $(this).parent().removeClass('error-field');
       }
     });
 
     $(this).closest('form').find('textarea').each(function () {
-      if($(this).val() === ''){
+      if($(this).val() === '' || $(this).val().search(reg2) !==  -1){
         $(this).parent().addClass('error-field');
         $(this).parent().removeClass('correct');
       } else {
@@ -295,7 +300,7 @@ $(document).ready(function(){
     }
   });
 
-  $('input, textarea, .ui-selectmenu-button, .phone').keydown(function () {
+  $('input, textarea, .ui-selectmenu-button, .phone').click(function () {
       $(this).closest('.error-field').removeClass('error-field');
   });
 
