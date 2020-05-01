@@ -330,12 +330,24 @@ $(document).ready(function(){
   });
 
 
-  $('input, textarea').on('keypress', function (e) {
-    if(!isNumberKey(e.key)){
-      // e.preventDefault();
-      $(this).parent().addClass('error-field');
-    }
-  })
+  // $('input, textarea').on('keypress', function (e) {
+  //   if(!isNumberKey(e.key)){
+  //     // e.preventDefault();
+  //     $(this).parent().addClass('error-field');
+  //   }
+  // })
+
+  // $('input, textarea').on('keyup', function (e) {
+  //   if($(this).val().length > 0){
+  //     $(this).addClass('color');
+  //   } else {
+  //     $(this).removeClass('color');
+  //   }
+  // })
+
+  // $(document).on('click', '.ui-selectmenu-button',  function () {
+  //   $(this).addClass('color');
+  // });
 
   function isNumberKey(evt)
   {
