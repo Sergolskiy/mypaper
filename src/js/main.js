@@ -117,7 +117,7 @@ $(document).ready(function(){
           if(offset2.top - w.scrollTop() > 0){
             $.fn.fullpage.setAutoScrolling(true);
             $.fn.fullpage.setFitToSection(true);
-            console.log(321);
+            // console.log(321);
 
             $('body').addClass('last-slide');
             $('body').removeClass('nofullpage');
@@ -131,7 +131,7 @@ $(document).ready(function(){
         $('.home-slider-dot--active').removeClass('home-slider-dot--active');
         $('.home-slider-dot').eq(index -1).addClass('home-slider-dot--active');
 
-        console.log(index);
+        // console.log(index);
         if(index == 7){
             // $('body').addClass('last-slide');
         } else {
@@ -248,9 +248,17 @@ $(document).ready(function(){
     if($(this).closest('form').find('input').hasClass('email-field')){
       var reg = /^[\w\.\d-_]+@[\w\.\d-_]+\.\w{2,4}$/i;
 
+      var input = $(this).closest('form').find('input');
 
-      if(reg.test($(this).closest('form').find('input').val()) == false) {
+      if($(this).closest('form').find('.email-field').val() == ""){
         $(this).closest('form').addClass('error-field');
+        $(this).closest('form').find('.email-field').next().html('Please enter your email');
+        return;
+      }
+
+      if(reg.test(input.val()) == false) {
+        $(this).closest('form').addClass('error-field');
+        input.next().html('Please enter a valid email address');
         return;
       } else {
         $(this).closest('form').removeClass('error-field');
@@ -267,6 +275,14 @@ $(document).ready(function(){
         $(this).parent().addClass('error-field');
         $(this).parent().removeClass('correct');
 
+        if($(this).val().search(reg2) !==  -1){
+          $(this).next().html('The field must not have a Cyrillic character');
+        }
+
+        if($(this).val() === ''){
+          $(this).next().html('The field must not be empty');
+        }
+
       } else {
 
         $(this).parent().addClass('correct');
@@ -278,6 +294,15 @@ $(document).ready(function(){
       if($(this).val() === '' || $(this).val().search(reg2) !==  -1){
         $(this).parent().addClass('error-field');
         $(this).parent().removeClass('correct');
+
+        if($(this).val().search(reg2) !==  -1){
+          $(this).next().html('The field must not have a Cyrillic character');
+        }
+
+        if($(this).val() === ''){
+          $(this).next().html('The field must not be empty');
+        }
+
       } else {
         $(this).parent().addClass('correct');
         $(this).parent().removeClass('error-field');
@@ -288,6 +313,10 @@ $(document).ready(function(){
       if($(this).val() === '0'){
         $(this).parent().addClass('error-field');
         $(this).parent().removeClass('correct');
+
+        $(this).next().next().html('Choose the parameter');
+
+
       } else {
         $(this).parent().addClass('correct');
         $(this).parent().removeClass('error-field');
@@ -352,7 +381,7 @@ $(document).ready(function(){
   function isNumberKey(evt)
   {
     var reg = /[а-яА-ЯёЁ]/g;
-    console.log(evt.search(reg));
+    // console.log(evt.search(reg));
     if (evt.search(reg) !==  -1)
       return false;
 
